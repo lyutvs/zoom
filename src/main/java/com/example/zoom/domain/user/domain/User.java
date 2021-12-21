@@ -1,18 +1,19 @@
 package com.example.zoom.domain.user.domain;
 
+import com.example.zoom.domain.feed.domain.Feed;
+import com.example.zoom.domain.like.domain.Like;
+import com.example.zoom.domain.question.domain.Question;
 import com.example.zoom.domain.user.domain.types.Role;
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity(name = "zoom_user")
-public class User implements UserDetails {
+public class User {
 
     @Id
     @Column(length = 20)
@@ -41,38 +42,15 @@ public class User implements UserDetails {
         this.accountNumber = accountNumber;
 
     }
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
-    }
 
-    @Override
-    public String getPassword() {
-        return null;
-    }
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private Set<Question> questions = new HashSet<>();
 
-    @Override
-    public String getUsername() {
-        return null;
-    }
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private Set<Like> likes = new HashSet<>();
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private Set<Feed> feeds = new HashSet<>();
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
 }

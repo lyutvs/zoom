@@ -1,7 +1,7 @@
 package com.example.zoom.like;
 
 import com.example.zoom.domain.feed.domain.Feed;
-import com.example.zoom.domain.feed.domain.repository.domain.Like;
+import com.example.zoom.domain.like.domain.Like;
 import com.example.zoom.domain.user.domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
