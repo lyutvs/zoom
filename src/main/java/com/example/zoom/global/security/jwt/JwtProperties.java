@@ -8,7 +8,7 @@ import java.util.Base64;
 
 @Getter
 @ConstructorBinding
-@ConfigurationProperties(prefix = "auth.jwt")
+@ConfigurationProperties(prefix = "jwt.secret")
 public class JwtProperties {
 
     private final String secretKey;
@@ -19,6 +19,7 @@ public class JwtProperties {
 
     public JwtProperties(String secretKey, Long accessExp, Long refreshExp,
                          String header, String prefix) {
+
         this.secretKey = Base64.getEncoder().encodeToString(secretKey.getBytes());
         this.accessExp = accessExp;
         this.refreshExp = refreshExp;
