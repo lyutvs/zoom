@@ -1,4 +1,4 @@
-package com.example.zoom.domain.like.domain;
+package com.example.zoom.domain.feed.domain.repository.domain;
 
 import com.example.zoom.domain.feed.domain.Feed;
 import com.example.zoom.domain.user.domain.User;
