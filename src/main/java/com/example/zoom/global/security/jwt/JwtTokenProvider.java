@@ -1,6 +1,6 @@
 package com.example.zoom.global.security.jwt;
 
-import com.example.zoom.global.security.auth.AuthDetailsService;
+import com.example.zoom.global.security.jwt.auth.AuthDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
