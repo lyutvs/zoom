@@ -10,7 +10,7 @@ public class ImageTest {
 
     @Test
     @DisplayName("Builder사용해 Image객체 생성 메소드")
-    void createByImage() {
+    void createByBuilder() {
 
         //given
         Feed feed = Feed.builder()
