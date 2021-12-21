@@ -1,4 +1,4 @@
-package com.example.zoom.question.domain;
+package com.example.zoom.domain.question.domain;
 
 import com.example.zoom.domain.user.domain.User;
 import lombok.Builder;

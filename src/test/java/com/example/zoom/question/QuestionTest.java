@@ -1,7 +1,7 @@
 package com.example.zoom.question;
 
 import com.example.zoom.domain.user.domain.User;
-import com.example.zoom.question.domain.Question;
+import com.example.zoom.domain.question.domain.Question;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ public class QuestionTest {
     @Test
     @DisplayName("Builder 사용해 Question 객체 생성 메소드")
     void createByBuilder() {
-        
+
         //given
         String title = "제목";
         String description = "설명";
