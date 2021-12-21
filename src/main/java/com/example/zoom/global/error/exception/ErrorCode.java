@@ -10,7 +10,9 @@ import lombok.Getter;
 public enum ErrorCode {
 
     USER_NOT_FOUND(404, "User not Found"),
-    BLACKED(403,"You were blacked")
+    BLACKED(403,"You were blacked"),
+    INVALID_TOKEN(401, "Invalid token"),
+    EXPiRED_TOKEN(401,"Expired token"),
     ;
 
     private final int status;
