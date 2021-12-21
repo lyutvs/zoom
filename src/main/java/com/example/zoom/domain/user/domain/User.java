@@ -9,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -35,15 +36,18 @@ public class User implements UserDetails {
     @Column(length = 20)
     private String accountNumber;
 
+    private LocalDate blackDate;
+
     @Builder
     public User(String email, String name,
-                String roomNumber, String accountNumber, Role role) {
+                String roomNumber, String accountNumber, Role role, LocalDate blackDate) {
 
         this.email = email;
         this.name = name;
         this.roomNumber = roomNumber;
         this.accountNumber = accountNumber;
         this.role = role;
+        this.blackDate = blackDate;
 
     }
 

@@ -9,6 +9,8 @@ import lombok.Getter;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ErrorCode {
 
+    USER_NOT_FOUND(404, "User not Found"),
+    BLACKED(403,"You were blacked")
     ;
 
     private final int status;
