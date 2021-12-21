@@ -1,4 +1,4 @@
-package com.example.zoom.global.security;
+package com.example.zoom.global.security.auth;
 
 import com.example.zoom.domain.user.domain.User;
 import com.example.zoom.domain.user.domain.repository.UserRepository;
