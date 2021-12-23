@@ -13,6 +13,8 @@ public enum ErrorCode {
     BLACKED(403,"You were blacked"),
     INVALID_TOKEN(401, "Invalid token"),
     EXPiRED_TOKEN(401,"Expired token"),
+    EXPIRED_ACCESS_TOKEN(401,"Expired access token"),
+    EXPIRED_REFRESH_TOKEN(401,"Expired refresh token"),
     ;
 
     private final int status;

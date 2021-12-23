@@ -9,7 +9,7 @@ public class InvalidTokenException extends CustomException {
     public static CustomException EXCEPTION =
             new InvalidTokenException();
 
-    private InvalidTokenException() {
+    public InvalidTokenException() {
         super(ErrorCode.INVALID_TOKEN);
     }
 }
