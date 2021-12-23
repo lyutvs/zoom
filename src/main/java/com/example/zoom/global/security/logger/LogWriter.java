@@ -10,7 +10,6 @@ import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.file.Files;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -20,13 +19,13 @@ import java.util.zip.ZipOutputStream;
 @Component
 public class LogWriter {
 
-    @Value("${logging.name}")
+    @Value("${zoom.name}")
     private String logFileName;
 
-    @Value("${logging.path}")
+    @Value("${zoom.file.path}")
     private String logPath;
 
-    @Value("${logging.size}")
+    @Value("${zoom.size}")
     private int logSize;
 
     private File file;
