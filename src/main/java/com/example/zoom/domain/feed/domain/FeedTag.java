@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity(name = "zoom_tag")
-public class Tag {
+public class FeedTag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class Tag {
     private Feed feed;
 
     @Builder
-    public Tag(String tag, Feed feed) {
+    public FeedTag(String tag, Feed feed) {
         this.tag = tag;
         this.feed = feed;
     }
