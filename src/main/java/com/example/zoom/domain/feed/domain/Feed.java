@@ -2,7 +2,6 @@ package com.example.zoom.domain.feed.domain;
 
 import com.example.zoom.domain.user.domain.User;
 import lombok.Builder;
-import lombok.Cleanup;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
