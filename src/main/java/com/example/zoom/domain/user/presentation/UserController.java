@@ -23,5 +23,5 @@ public class UserController {
     public TokenResponse tokenRefresh(@RequestBody RefreshTokenRequest request) {
         return userService.tokenRefresh(request);
     }
-    
+
 }
