@@ -5,6 +5,7 @@ import com.example.zoom.domain.user.presentation.dto.request.RefreshTokenRequest
 import com.example.zoom.domain.user.service.UserService;
 import com.example.zoom.global.util.jwt.dto.TokenResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,7 +16,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/auth")
-    public TokenResponse login(@RequestBody LoginRequest request) {
+    public ResponseEntity<TokenResponse> login(@RequestBody LoginRequest request) {
         return userService.login(request);
     }
 
