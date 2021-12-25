@@ -4,7 +4,10 @@ import com.example.zoom.domain.feed.domain.Feed;
 import com.example.zoom.domain.like.domain.Like;
 import com.example.zoom.domain.question.domain.Question;
 import com.example.zoom.domain.user.domain.types.Role;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -60,7 +63,6 @@ public class User implements UserDetails {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private Set<Feed> feeds = new HashSet<>();
 
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -94,5 +96,12 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return false;
+    }
+
+
+    public User changeName(String name) {
+
+        this.name = name;
+        return this;
     }
 }
