@@ -4,10 +4,9 @@ import com.example.zoom.domain.feed.domain.Feed;
 import com.example.zoom.domain.like.domain.Like;
 import com.example.zoom.domain.question.domain.Question;
 import com.example.zoom.domain.user.domain.types.Role;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.example.zoom.domain.user.presentation.dto.request.LoginRequest;
+import com.example.zoom.domain.user.presentation.dto.request.SignUpRequest;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +14,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 @Getter
@@ -27,7 +27,10 @@ public class User implements UserDetails {
     private String email;
 
     @Column(length = 4)
-    private String name;
+    private String nickname;
+
+    @Column(columnDefinition = "char(60)")
+    private String password;
 
     @Column(length = 20)
     @Enumerated(EnumType.STRING)
@@ -42,17 +45,24 @@ public class User implements UserDetails {
     private LocalDate blackDate;
 
     @Builder
-    public User(String email, String name,
+    public User(String email, String nickname,
                 String roomNumber, String accountNumber, Role role, LocalDate blackDate) {
 
         this.email = email;
-        this.name = name;
+        this.nickname = nickname;
         this.roomNumber = roomNumber;
         this.accountNumber = accountNumber;
         this.role = role;
         this.blackDate = blackDate;
 
     }
+
+    public User(SignUpRequest request) {
+        this.email = request.getEmail();
+        this.password = request.getPassword();
+        this.nickname = request.getNickname();
+    }
+
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     private Set<Question> questions = new HashSet<>();
@@ -98,10 +108,4 @@ public class User implements UserDetails {
         return false;
     }
 
-
-    public User changeName(String name) {
-
-        this.name = name;
-        return this;
-    }
 }
