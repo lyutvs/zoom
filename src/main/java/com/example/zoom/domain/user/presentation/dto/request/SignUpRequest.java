@@ -12,8 +12,8 @@ import javax.validation.constraints.Pattern;
 public class SignUpRequest {
 
     @NotBlank(message = "email은 Null, 공백을 허용하지 않습니다.")
-    @Pattern(regexp = "^[\\S]+$", message = "userid는 띄어쓰기를 허용하지 않습니다.")
-    @Length(max = 100, message = "email은 10글자 제한입니다.")
+    @Pattern(regexp = "^[\\S]+$", message = "email은 띄어쓰기를 허용하지 않습니다.")
+    @Length(max = 100, message = "email은 100글자 제한입니다.")
     private String email;
 
     @Pattern(regexp="(?=.*[a-z])(?=.*[!#$%&'()*+,-./:;<=>?@＼^_`{|}~])(?=.*[0-9])(?=\\S+$).{8,32}$",
