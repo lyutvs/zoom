@@ -15,6 +15,7 @@ public enum ErrorCode {
     EXPiRED_TOKEN(401,"Expired token"),
     EXPIRED_ACCESS_TOKEN(401,"Expired access token"),
     EXPIRED_REFRESH_TOKEN(401,"Expired refresh token"),
+    USER_ALREADY_EXISTS(409,"User already exists")
     ;
 
     private final int status;
