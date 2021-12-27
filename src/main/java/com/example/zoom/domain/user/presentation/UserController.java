@@ -1,7 +1,7 @@
 package com.example.zoom.domain.user.presentation;
 
 import com.example.zoom.domain.user.presentation.dto.request.LoginRequest;
-import com.example.zoom.domain.user.presentation.dto.request.RefreshTokenRequest;
+import com.example.zoom.domain.user.presentation.dto.request.SignUpRequest;
 import com.example.zoom.domain.user.service.UserService;
 import com.example.zoom.global.util.jwt.dto.TokenResponse;
 import lombok.RequiredArgsConstructor;
@@ -17,12 +17,13 @@ public class UserController {
 
     @PostMapping("/auth")
     public ResponseEntity<TokenResponse> login(@RequestBody LoginRequest request) {
-        return userService.login(request);
+//        return userService.login(request);
+        return null;
     }
 
     @PutMapping("/auth")
-    public TokenResponse tokenRefresh(@RequestBody RefreshTokenRequest request) {
-        return userService.tokenRefresh(request);
+    public void signup(@RequestBody SignUpRequest request) {
+        userService.signup(request);
     }
 
 }
