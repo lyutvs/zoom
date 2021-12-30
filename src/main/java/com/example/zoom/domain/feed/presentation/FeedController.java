@@ -1,6 +1,7 @@
 package com.example.zoom.domain.feed.presentation;
 
 import com.example.zoom.domain.feed.presentation.dto.request.PostFeedRequest;
+import com.example.zoom.domain.feed.presentation.dto.response.FeedResponse;
 import com.example.zoom.domain.feed.service.FeedService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,8 @@ public class FeedController {
 
     @PostMapping("/carrot")
     @ResponseStatus(HttpStatus.CREATED)
-    public void postCarrotFeed(@RequestBody PostFeedRequest request) {
-        feedService.postCarrotFeed(request);
+    public FeedResponse postCarrotFeed(@RequestBody PostFeedRequest request) {
+        return feedService.postFeed(request);
     }
 
 }
