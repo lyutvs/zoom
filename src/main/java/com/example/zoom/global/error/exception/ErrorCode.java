@@ -17,6 +17,7 @@ public enum ErrorCode {
     EXPIRED_REFRESH_TOKEN(401,"Expired refresh token"),
     USER_ALREADY_EXISTS(409,"User already exists"),
     FEED_NOT_FOUND(404, "Feed not found"),
+    CREDENTIAL_NOT_FOUND(404,"Credential not found"),
     ;
 
     private final int status;
