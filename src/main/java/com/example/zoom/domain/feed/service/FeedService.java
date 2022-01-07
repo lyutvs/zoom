@@ -5,6 +5,6 @@ import com.example.zoom.domain.feed.presentation.dto.response.FeedResponse;
 
 public interface FeedService {
 
-    FeedResponse postFeed(PostFeedRequest request);
+    void postFeed(PostFeedRequest request);
 
 }

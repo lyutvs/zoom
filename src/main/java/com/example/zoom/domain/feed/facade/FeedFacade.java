@@ -7,8 +7,6 @@ import com.example.zoom.domain.feed.domain.repository.FeedRepository;
 import com.example.zoom.domain.feed.domain.repository.ImageRepository;
 import com.example.zoom.domain.feed.exception.FeedNotFoundException;
 import com.example.zoom.domain.feed.presentation.dto.response.FeedResponse;
-import com.example.zoom.domain.user.domain.User;
-import com.example.zoom.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -27,7 +25,7 @@ public class FeedFacade {
                 .orElseThrow(() -> FeedNotFoundException.EXCEPTION);
     }
 
-    public FeedResponse feedToFeedResponse(Feed feed, User user) {
+    public FeedResponse feedToFeedResponse(Feed feed) {
         FeedResponse response = FeedResponse.builder()
                 .description(feed.getDescription())
                 .update_time(feed.getUpdate_time())

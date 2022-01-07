@@ -35,7 +35,8 @@ public class Feed {
 
 
     @Builder
-    public Feed(String title, String description, User user, LocalDateTime create_time, LocalDateTime update_time) {
+    public Feed(String title, String description,
+                User user, LocalDateTime create_time, LocalDateTime update_time) {
 
         this.title = title;
         this.description = description;

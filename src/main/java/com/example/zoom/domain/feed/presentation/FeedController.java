@@ -14,10 +14,10 @@ public class FeedController {
 
     private final FeedService feedService;
 
-    @PostMapping("/carrot")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public FeedResponse postCarrotFeed(@RequestBody PostFeedRequest request) {
-        return feedService.postFeed(request);
+    public void postCarrotFeed(@RequestBody PostFeedRequest request) {
+        feedService.postFeed(request);
     }
 
 }
