@@ -1,5 +1,6 @@
-package com.example.zoom.domain.feed.domain;
+package com.example.zoom.domain.image.domain;
 
+import com.example.zoom.domain.feed.domain.Feed;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
