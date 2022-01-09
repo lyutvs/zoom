@@ -19,13 +19,16 @@ public class Image {
     @Column(length = 150)
     private String path;
 
+    private String imageUrl;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "feed_id")
     private Feed feed;
 
     @Builder
-    public Image(String path, Feed feed) {
+    public Image(String path, Feed feed, String imageUrl) {
         this.path = path;
+        this.imageUrl = imageUrl;
         this.feed = feed;
     }
 }
