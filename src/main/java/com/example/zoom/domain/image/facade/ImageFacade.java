@@ -20,11 +20,11 @@ public class ImageFacade {
             String fileName = s3Util.upload(image);
 
             imageRepository.save(Image.builder()
-                    .imagePath(fileName)
+                    .path(fileName)
                     .imageUrl(s3Util.getFileUrl(fileName))
-                    .notice(feed)
+                    .feed(feed)
                     .build());
         }
     }
-    
+
 }
