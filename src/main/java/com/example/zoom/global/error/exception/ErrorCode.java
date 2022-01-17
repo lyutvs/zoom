@@ -11,11 +11,15 @@ public enum ErrorCode {
 
     USER_NOT_FOUND(404, "User not Found"),
     BLACKED(403,"You were blacked"),
+
     INVALID_TOKEN(401, "Invalid token"),
     EXPiRED_TOKEN(401,"Expired token"),
     EXPIRED_ACCESS_TOKEN(401,"Expired access token"),
     EXPIRED_REFRESH_TOKEN(401,"Expired refresh token"),
-    USER_ALREADY_EXISTS(409,"User already exists")
+    REFRESH_TOKEN_NOT_FOUND(404, "Refresh token not found"),
+
+    USER_ALREADY_EXISTS(409,"User already exists"),
+    PASSWORD_NOT_FOUND(404,"Password not found");
     ;
 
     private final int status;
