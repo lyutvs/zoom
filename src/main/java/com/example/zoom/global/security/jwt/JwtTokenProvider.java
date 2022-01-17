@@ -32,7 +32,7 @@ public class JwtTokenProvider {
         return generateToken(id, "refresh", jwtProperties.getRefreshExp());
     }
 
-    private String generateToken(String id, String type, Long exp) {
+    public String generateToken(String id, String type, Long exp) {
         return Jwts.builder()
                 .signWith(SignatureAlgorithm.HS256, jwtProperties.getSecretKey())
                 .setSubject(id)

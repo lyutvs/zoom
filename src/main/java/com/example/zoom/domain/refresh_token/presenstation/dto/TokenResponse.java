@@ -1,4 +1,4 @@
-package com.example.zoom.global.util.jwt.dto;
+package com.example.zoom.domain.refresh_token.presenstation.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
