@@ -1,6 +1,6 @@
 package com.example.zoom.refresh_token;
 
-import com.example.zoom.domain.refresh_token.RefreshToken;
+import com.example.zoom.domain.refresh_token.domain.RefreshToken;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
