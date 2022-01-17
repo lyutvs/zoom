@@ -1,6 +1,5 @@
 package com.example.zoom.domain.refresh_token.presenstation.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -9,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Builder
-public class TokenResponse {
+public class AccessTokenResponse {
 
     private final String accessToken;
 
