@@ -7,7 +7,7 @@ import com.example.zoom.domain.user.facade.UserFacade;
 import com.example.zoom.domain.user.presentation.dto.request.LoginRequest;
 import com.example.zoom.domain.user.presentation.dto.request.SignUpRequest;
 import com.example.zoom.global.security.jwt.JwtTokenProvider;
-import com.example.zoom.global.util.jwt.dto.TokenResponse;
+import com.example.zoom.domain.refresh_token.presenstation.dto.TokenResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
