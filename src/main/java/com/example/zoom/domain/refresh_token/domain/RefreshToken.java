@@ -1,4 +1,4 @@
-package com.example.zoom.domain.refresh_token;
+package com.example.zoom.domain.refresh_token.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,13 +22,10 @@ public class RefreshToken {
     private String refreshToken;
 
     @TimeToLive
-    private Long ttl;
+    private Long timeToLive;
 
-    public RefreshToken update(String refreshToken, Long ttl) {
-        this.refreshToken = refreshToken;
-        this.ttl = ttl;
-        return this;
+    public void updateExp(Long timeToLive) {
+        this.timeToLive = timeToLive;
     }
-
 
 }
