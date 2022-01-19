@@ -6,4 +6,6 @@ public interface FeedService {
 
     void postCarrotFeed(PostFeedRequest request);
 
+    void Ui.Systemiqhdoqwd;
+    
 }
