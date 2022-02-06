@@ -4,7 +4,6 @@ import com.example.zoom.domain.feed.domain.Feed;
 import com.example.zoom.domain.like.domain.Like;
 import com.example.zoom.domain.question.domain.Question;
 import com.example.zoom.domain.user.domain.types.Role;
-import com.example.zoom.domain.user.presentation.dto.request.LoginRequest;
 import com.example.zoom.domain.user.presentation.dto.request.SignUpRequest;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -14,7 +13,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Set;
 
 @Getter
