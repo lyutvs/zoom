@@ -16,7 +16,7 @@ public class ReportTest {
         String title = "제목";
         String description = "설명";
         User user = User.builder()
-                .name("사용자")
+                .nickname("사용자")
                 .build();
 
         //when
